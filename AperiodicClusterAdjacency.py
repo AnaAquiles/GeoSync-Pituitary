@@ -1,3 +1,17 @@
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import zscore
+from sklearn.utils import resample
+
+CONDITIONS  = ["Virgin", "OVX", "Lactant", "Weaned", "Multipara"]
+POPULATIONS = ["Lactotrophs", "Somatotrophs", "All population"]
+CLUSTERS    = [1, 2]
+RANDOM_SEED = 42
+
 """
 
 
@@ -18,18 +32,6 @@ EntropyOFTheSignal.csv  : spectral cluster assignments, delimited by ';'.
 AperiodicValues.csv     : per-cell aperiodic exponents, delimited by ';'.
                           Required columns: Cell group, Condition, x, Cells, Aperiodic Value.
 """
-
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from scipy.stats import zscore
-from sklearn.utils import resample
-
-CONDITIONS  = ["Virgin", "OVX", "Lactant", "Weaned", "Multipara"]
-POPULATIONS = ["Lactotrophs", "Somatotrophs", "All population"]
-CLUSTERS    = [1, 2]
-RANDOM_SEED = 42
 
 
 def load_data(index_path: str, aperiodic_path: str) -> tuple[pd.DataFrame, pd.DataFrame]:
