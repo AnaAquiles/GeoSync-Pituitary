@@ -1,20 +1,18 @@
-"""
 
-Phase-Amplitude Coupling (PAC) analysis using the Modulation Index (MI)
-method of Tort et al. (2010). Computes a comodulogram across a population
-of cells and produces summary plots for dominant phase and amplitude
-frequencies.
-
-Reference:
-    Tort ABL et al. (2010). Measuring phase-amplitude coupling between
-    neuronal oscillations of different frequencies. J Neurophysiol,
-    104(2), 1195-1210.
-"""
 
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import butter, lfilter, hilbert
 
+"""
+
+    Phase-Amplitude Coupling (PAC) analysis using the Modulation Index (MI)
+         method of Tort et al. (2010). Computes a comodulogram across a population
+        of cells and produces summary plots for dominant phase and amplitude
+          frequencies.
+
+
+"""
 
 def butter_bandpass(lowcut: float, highcut: float, fs: float, order: int = 3):
     """Design a Butterworth bandpass filter.
