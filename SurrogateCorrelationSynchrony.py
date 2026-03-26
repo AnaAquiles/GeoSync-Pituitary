@@ -1,5 +1,4 @@
 """
-surrogate_correlation_synchrony.py
 
 Two-stage analysis of pairwise cell interactions from calcium fluorescence
 time series:
@@ -19,7 +18,7 @@ time series:
 Input files
 -----------
 ClusterINDEX.csv  : semicolon-delimited; columns Cells, Population, Condition, Cluster.
-SynAsynINDEX.csv  : semicolon-delimited; columns Cells, Population, Condition, Kind.
+SynAsynINDEX.csv  : semicolon-delimited; columns Cells, Population, Condition, Kind. ## structured since the Stage 1
 
 Assumed upstream variable
 --------------------------
