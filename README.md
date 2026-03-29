@@ -4,7 +4,7 @@
 
 ---
 
-## 👀 Overview  
+## 🧠 Overview  
 This repository contains all the code used in our study on *population geometry coupling* (preprint coming soon). In this work, we identify **two classes of spontaneous calcium activity** by evaluating two types of structural interactions:
 
 - **Homotypic interactions**: within the same cell group  
@@ -21,42 +21,85 @@ For full experimental details, please refer to the Methods section of the manusc
 ---
 
 ## 🔬 Methodological Framework  
+
 This repository provides a complete framework to explore the **intrinsic dynamics of spontaneous calcium activity**, particularly in pituitary cells that can secrete hormones *without hypothalamic input*.  
 
-More broadly, the pipeline is designed to move from **general signal features to biologically meaningful insights**:
+The pipeline is structured as follows:
 
-### 1. Signal Decomposition  
-- Separation of **periodic** and **aperiodic** components  
-- Spectral analysis to classify oscillatory patterns  
+---
 
-### 2. Feature Extraction  
-- **Nonlinear metrics**: entropy, directional information  
-- **Linear metrics**: Spearman correlation for connectivity inference  
+### 🧹 0. Preprocessing  
+Initial conditioning and preparation of calcium signals.
 
-### 3. Population-Level Analysis  
-- Exploration of the **geometry of the activity landscape**  
-- Characterization of **synchrony patterns**  
+- `preprocessing.py`
 
-This approach revealed a **transient bistable state** in heterotypic interactions, suggesting dynamics consistent with a **Hopf oscillator**.  
+---
 
-In this regime, one class of signals may act as a *leader*, potentially initiating and driving secretory pulses.
+### 🌊 1. Signal Decomposition  
+Separation of **periodic** and **aperiodic** components, and spectral characterization.
+
+- `AperiodicFit.py` → extraction of aperiodic components  
+- `PAC.py` → phase-amplitude coupling analysis  
+- `SignalClasses.py` → classification of oscillatory regimes  
+
+---
+
+### 📊 2. Feature Extraction  
+
+#### 🔹 Aperiodic & Entropy-Based Metrics  
+- `AperiodicEntropyCorr.py` → entropy and correlation structure  
+- `ContingencyAperiodicEntropy.py` → contingency analysis between entropy features  
+
+#### 🔹 Connectivity & Correlation  
+- `AperiodicClusterAdjacency.py` → adjacency structure from aperiodic features  
+- `SurrogateCorrelationSynchrony.py` → surrogate-based validation of synchrony  
+
+---
+
+### 🧭 3. Population-Level & Geometric Analysis  
+
+Exploration of the **geometry of the activity landscape** and synchrony structure.
+
+- `GeometricSyncrony.py` → geometric description of synchrony  
+- `QuasipotentialDominance.py` → dominance landscape / quasipotential analysis  
+- `PhasePortrait-elevator.py` → dynamical phase space exploration  
+
+---
+
+### ⚖️ 4. Dynamical Regimes & Bistability  
+
+Characterization of emergent collective states.
+
+- `BistabilityAnalysis.py` → detection of bistable regimes  
+
+This analysis revealed a **transient bistable state** in heterotypic interactions, suggesting dynamics consistent with a **Hopf oscillator**, where one class of signals may act as a *leader* driving secretory pulses.
 
 ---
 
 ## 🤖 Modeling  
-To validate these findings, we implemented a **null model generator** based on a **low-rank recurrent neural network (RNN)**.  
-This allows us to test whether the observed dynamics arise from structured interactions or can be explained by simpler generative processes.
+
+To validate these findings, we implemented a **null model generator**:
+
+- `rnnNullModel.py` → low-rank recurrent neural network (RNN)  
+
+This allows testing whether observed dynamics arise from structured biological interactions or simpler generative mechanisms.
+
+---
+
+## ⚙️ Environment  
+
+- `enviroment.yml` → reproducible computational environment  
 
 ---
 
 ## 🚀 How to Use This Repository  
-You can use this framework to explore calcium dynamics (or similar time series data) in your own systems.  
 
-💡 **Suggested approach:**
-1. Start with simple feature extraction  
-2. Gradually incorporate spectral and nonlinear analyses  
-3. Explore connectivity and population geometry  
-4. Interpret results in the context of your biological system  
+💡 **Suggested workflow:**
+1. Start with preprocessing  
+2. Perform signal decomposition  
+3. Extract features (entropy, correlations, coupling)  
+4. Analyze synchrony and geometry  
+5. Explore dynamical regimes and validate with null models  
 
 ---
 
