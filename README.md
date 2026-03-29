@@ -98,12 +98,12 @@ This allows testing whether observed dynamics arise from structured biological i
 2. Perform signal decomposition  
 3. Extract features (entropy, correlations, coupling)  
 4. Analyze synchrony and geometry  
-5. Explore dynamical regimes and validate with null models  
+5. Explore dynamical regimes and validate with the null model  
 
 ---
 
 ## 🌱 Final Thoughts  
-This repository is intended as both a **research companion** and a **starting point** for exploring how spontaneous activity encodes meaningful biological dynamics.  
+This repository is intended as both a **research companion** and a **starting point** for exploring how calcium spontaneous activity encodes meaningful biological dynamics.  
 
 Feel free to adapt, extend, and apply these tools to your own questions!
 
