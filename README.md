@@ -16,7 +16,7 @@ Our goal is to better understand how collective dynamics emerge from these inter
 
 ## 🧪 Data  
 All time series data come from **in vitro calcium imaging experiments**.  
-For full experimental details, please refer to the Methods section of the manuscript (coming soon 📄).
+For full experimental details, please refer to the Methods section of the manuscript here: https://doi.org/10.64898/2026.04.05.716480.
 
 ---
 
