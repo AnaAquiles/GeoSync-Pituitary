@@ -5,7 +5,7 @@
 ---
 
 ## 👀 Overview  
-This repository contains all the code used in our study on *population geometry coupling* (https://doi.org/10.64898/2026.04.05.716480.). In this work, we identify **two classes of spontaneous calcium activity** by evaluating two types of structural interactions:
+This repository contains all the code used in our study on [population geometry coupling](https://doi.org/10.64898/2026.04.05.716480.). In this work, we identify **two classes of spontaneous calcium activity** by evaluating two types of structural interactions:
 
 - **Homotypic interactions**: within the same cell group  
 - **Heterotypic interactions**: across all cells exhibiting spontaneous calcium activity  
@@ -16,7 +16,7 @@ Our goal is to better understand how collective dynamics emerge from these inter
 
 ## 🧪 Data  
 All time series data come from **in vitro calcium imaging experiments**.  
-For full experimental details, please refer to the Methods section of the manuscript here: https://doi.org/10.64898/2026.04.05.716480.
+For full experimental details, please refer to the Methods section of the manuscript [here](https://doi.org/10.64898/2026.04.05.716480)
 
 ---
 
